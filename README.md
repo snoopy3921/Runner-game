@@ -16,6 +16,7 @@ Not only that, the kit but also has RS485, NRF24L01+, and External Flash 32MB su
 
 ## II. About game
 To be honest im not a gaming guy. So to think the game i like and make it as we have been playing on retro game console like this, i cant remember.
+
 ![alt text](assets/image-1.png)
 
 But at least i like playing FPS game(Valorant, CSGO,...). The idea is making a running game but make it FPS :))). I see the guy made his [Evasion game](https://community.arduboy.com/t/evasion-a-simple-action-game/9226) and i want to make it too.
@@ -75,7 +76,7 @@ Task button using ***button driver***, to init buttons, first it calls:
 ``` C
 /* button init */
 button_init(&btn_mode,	10,	BUTTON_MODE_ID,	io_button_mode_init,	io_button_mode_read,	btn_mode_callback);
-button_init(&btn_up,	10,	BUTTON_UP_ID,	io_button_up_init,		io_button_up_read,		btn_up_callback);
+button_init(&btn_up,	10,	BUTTON_UP_ID,	io_button_up_init,	io_button_up_read,	btn_up_callback);
 button_init(&btn_down,	10,	BUTTON_DOWN_ID,	io_button_down_init,	io_button_down_read,	btn_down_callback);
 
 button_enable(&btn_mode);
