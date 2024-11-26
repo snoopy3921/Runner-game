@@ -9,7 +9,7 @@
 
 This game was created with implementation of [AK-mOS(mini RTOS)](https://github.com/snoopy3921/AK-mOS---The-simple-RTOS-on-AK-base-kit) and **Oled GUI(Graphic user interface)**. With the purpose to test, learn and pratice the use of Event-driven-based with tasks. 
 
-The development of [AK-mOS](https://github.com/snoopy3921/AK-mOS---The-simple-RTOS-on-AK-base-kit) and **Oled GUI** are being updated, with will be released in the future.
+The development of [AK-mOS](https://github.com/snoopy3921/AK-mOS---The-simple-RTOS-on-AK-base-kit) and **Oled GUI** are being updated, which will be released in the future.
 
 See [AK Base Kit](https://epcb.vn/products/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-mcu) for more information 
 
