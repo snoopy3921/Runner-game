@@ -1,6 +1,12 @@
 # Runner-game built on AK-base-kit
 ![alt text](assets/image3.png)
 
+
+<div align="center">
+    <video src="https://github.com/user-attachments/assets/366e2aa3-e14f-4039-b0cc-4ef08b79b8d6" alt="runner game" />
+</div>
+
+
 This game was created with implementation of [AK-mOS(mini RTOS)](https://github.com/snoopy3921/AK-mOS---The-simple-RTOS-on-AK-base-kit) and **Oled GUI(Graphic user interface)**. With the purpose to test, learn and pratice the use of Event-driven-based with tasks. 
 
 The development of [AK-mOS](https://github.com/snoopy3921/AK-mOS---The-simple-RTOS-on-AK-base-kit) and **Oled GUI** are being updated, with will be released in the future.
