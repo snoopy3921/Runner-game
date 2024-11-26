@@ -1,0 +1,2 @@
+include sources/device/STM32L1xx_StdPeriph_Driver/Makefile
+include sources/device/core/Makefile
