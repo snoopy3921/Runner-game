@@ -143,7 +143,7 @@ And then in task it looks like:
 void task_buzzer(void *p_arg)
 {
     msg_t *msg;
-    int32_t sig = OS_CFG_DELAY_MAX - 1;
+    int32_t sig = OS_CFG_DELAY_MAX;
 
     while (1)
     {   
@@ -167,7 +167,7 @@ void task_buzzer(void *p_arg)
             default:
                 break;
             }
-            sig = OS_CFG_DELAY_MAX - 1;
+            sig = OS_CFG_DELAY_MAX;
         }
     }
 }
@@ -183,7 +183,7 @@ Task time has message queue to wait for signals. Signal that this task need is t
 void task_timer(void *p_arg)
 {
     msg_t *msg;
-    int32_t sig = OS_CFG_DELAY_MAX - 1;
+    int32_t sig = OS_CFG_DELAY_MAX;
 
     while (1)
     {   
@@ -193,7 +193,7 @@ void task_timer(void *p_arg)
             sig = msg->sig;
             os_msg_free(msg);
         }
-        if(sig != OS_CFG_DELAY_MAX - 1) 
+        if(sig != OS_CFG_DELAY_MAX) 
         {
             os_task_post_msg_pure(TASK_SCR_ID, AC_DISPLAY_GAME_UPDATE);
         }
