@@ -159,14 +159,12 @@ void os_msg_queue_put_pure(msg_queue_t *p_msg_q, int32_t sig)
 
 msg_t *os_msg_queue_get(msg_queue_t *p_msg_q)
 {
-    ENTER_CRITICAL();
     msg_t *p_msg;
 
     if (p_msg_q->size_curr == 0u)
     {
         // OSUniversalError = OS_ERR_MSG_QUEUE_IS_EMPTY;
         // os_assert(0);
-        EXIT_CRITICAL();
         return NULL;
     }
 
@@ -184,8 +182,6 @@ msg_t *os_msg_queue_get(msg_queue_t *p_msg_q)
     {
         p_msg_q->size_curr--; /* Yes, One less message in the queue */
     }
-
-    EXIT_CRITICAL();
 
     return (p_msg);
 }
@@ -199,14 +195,12 @@ void *os_msg_get_dynamic_data(msg_t *p_msg,
 
 msg_t *os_msg_queue_get_pure(msg_queue_t *p_msg_q)
 {
-    ENTER_CRITICAL();
     msg_t *p_msg;
 
     if (p_msg_q->size_curr == 0u)
     {
         // OSUniversalError = OS_ERR_MSG_QUEUE_IS_EMPTY;
         // os_assert(0);
-        EXIT_CRITICAL();
         return NULL;
     }
 
@@ -224,8 +218,6 @@ msg_t *os_msg_queue_get_pure(msg_queue_t *p_msg_q)
     {
         p_msg_q->size_curr--; /* Yes, One less message in the queue */
     }
-
-    EXIT_CRITICAL();
 
     return (p_msg);
 }
