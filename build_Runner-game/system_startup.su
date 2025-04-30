@@ -1,7 +1,0 @@
-sources/platform/system_startup.c:156:6:HardFault_Handler	8	static
-sources/platform/system_startup.c:166:6:Default_Handler	8	static
-sources/platform/system_startup.c:52:1:sys_ctrl_delay	0	static
-sources/platform/system_startup.c:60:6:sys_cfg_clock	8	static
-sources/platform/system_startup.c:176:6:Reset_Handler	16	static
-sources/platform/system_startup.c:71:6:_init	0	static
-sources/platform/system_startup.c:74:6:_fini	0	static

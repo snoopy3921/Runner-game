@@ -1,2 +1,0 @@
-sources/application/tasks/task_buzzer.cpp:5:13:void play_track(const Tone_TypeDef*)	8	static
-sources/application/tasks/task_buzzer.cpp:19:6:void task_buzzer(void*)	16	static

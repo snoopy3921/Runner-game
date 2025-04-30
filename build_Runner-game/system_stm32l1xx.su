@@ -1,2 +1,0 @@
-sources/device/core/system_stm32l1xx.c:181:6:SystemInit	8	static
-sources/device/core/system_stm32l1xx.c:253:6:SystemCoreClockUpdate	8	static

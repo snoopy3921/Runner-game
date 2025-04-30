@@ -1,4 +1,0 @@
-sources/application/screens/Scr/scr_menu_game.cpp:92:13:void loop_funtion(msg_t*)	0	static
-sources/application/screens/Scr/scr_menu_game.cpp:138:6:void scr_menu_game_register()	16	static
-sources/application/screens/Scr/scr_menu_game.cpp:98:13:void event_function(msg_t*)	32	static
-sources/application/screens/Scr/scr_menu_game.cpp:58:13:void setup_function(msg_t*)	40	static

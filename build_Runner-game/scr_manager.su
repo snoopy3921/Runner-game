@@ -1,5 +1,0 @@
-sources/application/screens/scr_manager.cpp:48:6:void scr_mng_run(msg_t*)	16	static
-sources/application/screens/scr_manager.cpp:58:6:void scr_reg(uint8_t, uint8_t*, uint8_t*, function_ptr, function_ptr, function_ptr)	12	static
-sources/application/screens/scr_manager.cpp:85:6:void scr_curr_set_stt(uint8_t)	0	static
-sources/application/screens/scr_manager.cpp:35:6:void scr_mng_init()	8	static
-sources/application/screens/scr_manager.cpp:75:6:void scr_shift(uint8_t)	16	static

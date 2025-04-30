@@ -1,5 +1,0 @@
-sources/application/tasks/task_button.cpp:20:6:void btn_mode_callback(void*)	0	static
-sources/application/tasks/task_button.cpp:58:6:void btn_up_callback(void*)	0	static
-sources/application/tasks/task_button.cpp:84:6:void btn_down_callback(void*)	0	static
-sources/application/tasks/task_button.cpp:117:7:void nRF24_Handler()	8	static
-sources/application/tasks/task_button.cpp:134:6:void task_btn(void*)	8	static
