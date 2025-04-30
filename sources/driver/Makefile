@@ -2,6 +2,7 @@ include sources/driver/Adafruit_ssd1306syp/Makefile
 include sources/driver/button/Makefile
 include sources/driver/buzzer/Makefile
 include sources/driver/eeprom/Makefile
+include sources/driver/nRF24/Makefile
 
 
 CFLAGS		+= -I./sources/driver

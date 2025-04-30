@@ -1,0 +1,13 @@
+./sources/GUI/Inc/oled_obj.h:95:15:virtual void oled_obj::setFade(int8_t)	0	static
+./sources/GUI/Inc/oled_obj.h:105:15:virtual void oled_obj::setX(int16_t)	0	static
+./sources/GUI/Inc/oled_obj.h:106:15:virtual void oled_obj::setY(int16_t)	0	static
+sources/GUI/Src/oled_obj.cpp:22:1:oled_obj::~oled_obj()	0	static
+sources/GUI/Src/oled_obj.cpp:32:6:virtual void oled_obj::deinit()	0	static
+sources/GUI/Src/oled_obj.cpp:22:1:virtual oled_obj::~oled_obj()	8	static
+sources/GUI/Src/oled_obj.cpp:12:1:oled_obj::oled_obj()	0	static
+sources/GUI/Src/oled_obj.cpp:37:6:void oled_obj::drawFade()	16	static
+sources/GUI/Src/oled_obj.cpp:133:6:void oled_obj::setAllign(allign_t)	0	static
+sources/GUI/Src/oled_obj.cpp:185:6:static void oled_obj::oled_obj_init()	0	static
+sources/GUI/Src/oled_obj.cpp:191:6:static void oled_obj::oled_obj_add(oled_obj*)	8	static
+sources/GUI/Src/oled_obj.cpp:224:6:static void oled_obj::oled_obj_delete(oled_obj*)	0	static
+sources/GUI/Src/oled_obj.cpp:255:6:static void oled_obj::oled_obj_draw()	8	static

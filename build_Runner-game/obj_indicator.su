@@ -1,0 +1,13 @@
+./sources/GUI/Inc/oled_obj.h:95:15:virtual void oled_obj::setFade(int8_t)	0	static
+./sources/GUI/Inc/oled_obj.h:105:15:virtual void oled_obj::setX(int16_t)	0	static
+./sources/GUI/Inc/oled_obj.h:106:15:virtual void oled_obj::setY(int16_t)	0	static
+sources/GUI/Src/obj_indicator.cpp:43:6:virtual void obj_indicator::deinit()	0	static
+sources/GUI/Src/obj_indicator.cpp:32:1:obj_indicator::~obj_indicator()	8	static
+sources/GUI/Src/obj_indicator.cpp:32:1:virtual obj_indicator::~obj_indicator()	8	static
+sources/GUI/Src/obj_indicator.cpp:73:6:virtual void obj_indicator::draw()	32	static
+sources/GUI/Src/obj_indicator.cpp:21:1:obj_indicator::obj_indicator()	8	static
+sources/GUI/Src/obj_indicator.cpp:50:6:void obj_indicator::update()	8	static
+sources/GUI/Src/obj_indicator.cpp:61:6:void obj_indicator::setTarget(oled_obj*)	16	static
+sources/GUI/Src/obj_indicator.cpp:5:13:void idctor_init(obj_indicator*, oled_obj*, uint8_t, bool)	24	static
+sources/GUI/Src/obj_indicator.cpp:26:1:obj_indicator::obj_indicator(oled_obj*, uint8_t, bool)	24	static
+sources/GUI/Src/obj_indicator.cpp:37:6:void obj_indicator::init(oled_obj*, uint8_t, bool)	4	static

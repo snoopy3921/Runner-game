@@ -397,3 +397,107 @@ uint8_t io_eeprom_erase(uint32_t address, uint32_t len) {
 
 	return EEPROM_DRIVER_OK;
 }
+
+/******************************************************************************
+* nfr24l01 IO function
+*******************************************************************************/
+void nrf24l01_io_ctrl_init() {
+	/* CE / CSN / IRQ */
+	GPIO_InitTypeDef        GPIO_InitStructure;
+	EXTI_InitTypeDef        EXTI_InitStruct;
+	NVIC_InitTypeDef        NVIC_InitStruct;
+
+	/* GPIOA Periph clock enable */
+	RCC_AHBPeriphClockCmd(NRF_CE_IO_CLOCK, ENABLE);
+	RCC_AHBPeriphClockCmd(NRF_CSN_IO_CLOCK, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
+
+	/*CE -> PA8*/
+	GPIO_InitStructure.GPIO_Pin = NRF_CE_IO_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	GPIO_Init(NRF_CE_IO_PORT, &GPIO_InitStructure);
+
+	/*CNS -> PB9*/
+	GPIO_InitStructure.GPIO_Pin = NRF_CSN_IO_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+
+	GPIO_Init(NRF_CSN_IO_PORT, &GPIO_InitStructure);
+
+	/* IRQ -> PB1 */
+	GPIO_InitStructure.GPIO_Pin = NRF_IRQ_IO_PIN;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+	GPIO_Init(NRF_IRQ_IO_PORT, &GPIO_InitStructure);
+
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOB, EXTI_PinSource1);
+
+	EXTI_InitStruct.EXTI_Line = EXTI_Line1;
+	EXTI_InitStruct.EXTI_LineCmd = ENABLE;
+	EXTI_InitStruct.EXTI_Mode = EXTI_Mode_Interrupt;
+	EXTI_InitStruct.EXTI_Trigger = EXTI_Trigger_Falling;
+	EXTI_Init(&EXTI_InitStruct);
+
+	NVIC_InitStruct.NVIC_IRQChannel = EXTI1_IRQn;
+	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
+	NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
+	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&NVIC_InitStruct);
+}
+
+void nrf24l01_ce_low() {
+	GPIO_ResetBits(NRF_CE_IO_PORT, NRF_CE_IO_PIN);
+}
+
+void nrf24l01_ce_high() {
+	GPIO_SetBits(NRF_CE_IO_PORT, NRF_CE_IO_PIN);
+}
+
+void nrf24l01_csn_low() {
+	GPIO_ResetBits(NRF_CSN_IO_PORT, NRF_CSN_IO_PIN);
+}
+
+void nrf24l01_csn_high() {
+	GPIO_SetBits(NRF_CSN_IO_PORT, NRF_CSN_IO_PIN);
+}
+void nrf24l01_spi_init()
+{
+	//PA7 - MOSI
+	//PA6 - MISO
+	//PA5 - SCK
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+	RCC_APB2PeriphClockCmd(NRF_SPI_CLOCK, ENABLE);
+	GPIO_InitTypeDef        GPIO_InitStruct;
+
+	GPIO_InitStruct.GPIO_Pin = NRF_SCK_IO_PIN | NRF_MISO_IO_PIN | NRF_MOSI_IO_PIN; 	
+	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_40MHz;
+	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_Init(NRF_SCK_IO_PORT, &GPIO_InitStruct);	
+	// Set alternate function for SPI pins
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_SPI1); // SCK
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1); // MISO
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1); // MOSI
+	
+	//SPI1 Init
+	SPI_InitTypeDef SPI_InitStruct;
+	SPI_InitStruct.SPI_Direction 			= SPI_Direction_2Lines_FullDuplex;
+	SPI_InitStruct.SPI_Mode 				= SPI_Mode_Master;
+	SPI_InitStruct.SPI_DataSize 			= SPI_DataSize_8b;
+	SPI_InitStruct.SPI_CRCPolynomial 		= 7;
+	SPI_InitStruct.SPI_CPOL					= SPI_CPOL_Low;			// 	CPOL = 0
+	SPI_InitStruct.SPI_CPHA					= SPI_CPHA_1Edge;		//	CPHA = 1
+	SPI_InitStruct.SPI_NSS					= SPI_NSS_Soft;
+	SPI_InitStruct.SPI_BaudRatePrescaler	= SPI_BaudRatePrescaler_2;
+	SPI_InitStruct.SPI_FirstBit				= SPI_FirstBit_MSB;	
+	
+	SPI_Init(SPI1, &SPI_InitStruct);
+	SPI_NSSInternalSoftwareConfig(SPI1, SPI_NSSInternalSoft_Set);
+	SPI_Cmd(SPI1, ENABLE);
+}

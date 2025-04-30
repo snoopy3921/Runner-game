@@ -1,0 +1,16 @@
+./sources/GUI/Inc/oled_obj.h:95:15:virtual void oled_obj::setFade(int8_t)	0	static
+./sources/GUI/Inc/oled_obj.h:105:15:virtual void oled_obj::setX(int16_t)	0	static
+./sources/GUI/Inc/oled_obj.h:106:15:virtual void oled_obj::setY(int16_t)	0	static
+sources/GUI/Src/obj_label.cpp:103:6:virtual void obj_label::draw()	8	static
+sources/GUI/Src/obj_label.cpp:38:6:virtual void obj_label::deinit()	8	static
+sources/GUI/Src/obj_label.cpp:12:1:obj_label::~obj_label()	8	static
+sources/GUI/Src/obj_label.cpp:12:1:virtual obj_label::~obj_label()	8	static
+sources/GUI/Src/obj_label.cpp:9:1:obj_label::obj_label()	8	static
+sources/GUI/Src/obj_label.cpp:22:6:void obj_label::init(int16_t, int16_t)	16	static
+sources/GUI/Src/obj_label.cpp:17:1:obj_label::obj_label(int16_t, int16_t)	16	static
+sources/GUI/Src/obj_label.cpp:46:6:)	68	static
+sources/GUI/Src/obj_label.cpp:57:6:void obj_label::print(const char*)	16	static
+sources/GUI/Src/obj_label.cpp:64:6:void obj_label::print(long unsigned int)	56	static
+sources/GUI/Src/obj_label.cpp:86:6:void obj_label::clear()	0	static
+sources/GUI/Src/obj_label.cpp:93:6:void obj_label::setFont(font_t)	0	static
+sources/GUI/Src/obj_label.cpp:98:6:void obj_label::setTextSize(uint8_t)	0	static

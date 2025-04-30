@@ -1,0 +1,3 @@
+sources/platform/system.c:10:13:Sys_Console_Send_Char	8	static
+sources/platform/system.c:22:6:SysInitConsole	48	static
+sources/platform/system.c:79:6:USART1_IRQHandler	8	static

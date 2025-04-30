@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "nrf24.h": "c",
+        "io_cfg.h": "c",
+        "optional": "c",
+        "system_error": "c",
+        "array": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "cstdint": "cpp"
+    }
+}

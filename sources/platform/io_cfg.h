@@ -95,6 +95,20 @@ extern "C"
 #define NRF_IRQ_IO_PORT					(GPIOB)
 #define NRF_IRQ_IO_CLOCK				(RCC_AHBPeriph_GPIOB)
 
+#define NRF_MOSI_IO_PIN					(GPIO_Pin_7)
+#define NRF_MOSI_IO_PORT				(GPIOA)
+#define NRF_MOSI_IO_CLOCK				(RCC_AHBPeriph_GPIOA)
+
+#define NRF_MISO_IO_PIN					(GPIO_Pin_6)
+#define NRF_MISO_IO_PORT				(GPIOA)
+#define NRF_MISO_IO_CLOCK				(RCC_AHBPeriph_GPIOA)
+
+#define NRF_SCK_IO_PIN					(GPIO_Pin_5)
+#define NRF_SCK_IO_PORT				    (GPIOA)
+#define NRF_SCK_IO_CLOCK				(RCC_AHBPeriph_GPIOA)
+
+#define NRF_SPI_CLOCK				    (RCC_APB2Periph_SPI1)
+
 /*****************************************************************************
  *Pin map Flash W2508
 ******************************************************************************/
@@ -232,6 +246,17 @@ extern int  ssd1306_data_digital_read();
 extern uint8_t  io_eeprom_read(uint32_t, uint8_t*, uint32_t);
 extern uint8_t  io_eeprom_write(uint32_t, uint8_t*, uint32_t);
 extern uint8_t  io_eeprom_erase(uint32_t, uint32_t);
+
+/******************************************************************************
+* nfr24l01 IO function
+*******************************************************************************/
+extern void nrf24l01_io_ctrl_init();
+extern void nrf24l01_ce_low();
+extern void nrf24l01_ce_high();
+extern void nrf24l01_csn_low();
+extern void nrf24l01_csn_high();
+
+extern void nrf24l01_spi_init();
 
 
 #ifdef __cplusplus

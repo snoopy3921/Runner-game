@@ -1,0 +1,9 @@
+sources/AK-mOS/Src/os_msg.c:14:6:msg_pool_init	8	static
+sources/AK-mOS/Src/os_msg.c:38:6:os_msg_free	8	static
+sources/AK-mOS/Src/os_msg.c:53:6:os_msg_queue_init	0	static
+sources/AK-mOS/Src/os_msg.c:62:6:os_msg_queue_put_dynamic	24	static
+sources/AK-mOS/Src/os_msg.c:113:6:os_msg_queue_put_pure	24	static
+sources/AK-mOS/Src/os_msg.c:160:8:os_msg_queue_get	0	static
+sources/AK-mOS/Src/os_msg.c:189:7:os_msg_get_dynamic_data	0	static
+sources/AK-mOS/Src/os_msg.c:196:8:os_msg_queue_get_pure	0	static
+sources/AK-mOS/Src/os_msg.c:225:9:os_msg_get_pure_data	0	static

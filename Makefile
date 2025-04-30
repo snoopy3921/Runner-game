@@ -13,7 +13,7 @@ Print = @echo "~"
 NAME_MODULE = Runner-game
 PROJECT = $(NAME_MODULE)
 
-GCC_PATH		= $(HOME)/tools/gcc-arm-none-eabi-10.3-2021.10
+GCC_PATH		= $(HOME)/workspace/tools/gcc-arm-none-eabi-10.3-2021.10
 PROGRAMER_PATH		= $(HOME)/tools/STM32CubeProgrammer/bin
 OPENOCD_CFG_PATH	= /usr/local/share/openocd/scripts/board/stm32ldiscovery.cfg
 

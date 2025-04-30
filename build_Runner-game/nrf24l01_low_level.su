@@ -1,0 +1,6 @@
+sources/driver/nRF24/nrf24l01_low_level.c:7:6:delay_function	0	static
+sources/driver/nRF24/nrf24l01_low_level.c:14:6:SPI_Initializer	0	static
+sources/driver/nRF24/nrf24l01_low_level.c:20:6:pinout_Initializer	0	static
+sources/driver/nRF24/nrf24l01_low_level.c:26:6:nrf24_SPI	0	static
+sources/driver/nRF24/nrf24l01_low_level.c:33:9:SPI_send_command	16	static
+sources/driver/nRF24/nrf24l01_low_level.c:47:6:nrf24_CE	0	static

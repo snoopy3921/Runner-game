@@ -1,0 +1,6 @@
+sources/application/screens/Scr/scr_startup.cpp:42:13:void loop_funtion(msg_t*)	0	static
+sources/application/screens/Scr/scr_startup.cpp:81:6:void scr_startup_register()	16	static
+sources/application/screens/Scr/scr_startup.cpp:84:1:cpp)	8	static
+sources/application/screens/Scr/scr_startup.cpp:16:13:void setup_function(msg_t*)	32	static
+sources/application/screens/Scr/scr_startup.cpp:54:13:void event_function(msg_t*)	8	static
+sources/application/screens/Scr/scr_startup.cpp:84:1:cpp)	8	static

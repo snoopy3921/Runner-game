@@ -1,0 +1,11 @@
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:144:6:DMA_DeInit	0	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:238:6:DMA_Init	8	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:295:6:DMA_StructInit	0	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:330:6:DMA_Cmd	0	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:389:6:DMA_SetCurrDataCounter	0	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:407:10:DMA_GetCurrDataCounter	0	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:482:6:DMA_ITConfig	0	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:562:12:DMA_GetFlagStatus	0	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:658:6:DMA_ClearFlag	0	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:736:10:DMA_GetITStatus	0	static
+sources/device/STM32L1xx_StdPeriph_Driver/src/stm32l1xx_dma.c:832:6:DMA_ClearITPendingBit	0	static

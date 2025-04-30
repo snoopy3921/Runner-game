@@ -8,6 +8,7 @@
 
 #include "buzzer.h"
 
+
 int main()
 {
     SysInitConsole();
@@ -31,8 +32,6 @@ int main()
     os_init();
     os_task_create_list((task_t*)app_task_table, TASK_EOT_ID);
     os_run();
-
-
 
     while(1)
     {	

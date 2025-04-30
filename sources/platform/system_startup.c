@@ -42,6 +42,8 @@ void DebugMon_Handler(void)     __attribute__ ((weak, alias("Default_Handler")))
 void PendSV_Handler(void)		__attribute__ ((weak));
 void SysTick_Handler(void)		__attribute__ ((weak));
 
+void nRF24_Handler(void)		__attribute__ ((weak));
+
 void Default_Handler(void);
 
 void USART1_IRQHandler(void)	__attribute__ ((weak));
@@ -102,7 +104,7 @@ void (* const vectors[])() =
 	Default_Handler,						//	FLASH
 	Default_Handler,						//	RCC
 	Default_Handler,						//	EXTI Line 0
-	Default_Handler,							//	EXTI Line 1
+	nRF24_Handler,							//	EXTI Line 1
 	Default_Handler,						//	EXTI Line 2
 	Default_Handler,						//	EXTI Line 3
 	Default_Handler,						//	EXTI Line 4
